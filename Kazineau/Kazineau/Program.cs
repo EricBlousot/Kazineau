@@ -7,26 +7,29 @@ namespace Kazineau
     {
         static void Main(string[] args)
         {
-            int nbBankWin = 0;
             int nbGames = 10000;
-            for (int i = 0; i < nbGames; i++)
-            {
-                nbBankWin+=Program.playGame()?1:0;
-            }
 
-            Console.WriteLine("Number of game: " + nbGames);
-            Console.WriteLine("Number of game the bank winned: " + nbBankWin);
-            Console.WriteLine("% Of bank win: " + (nbBankWin * 100) / nbGames + "%");
-        }
-
-        //True if the bank won the game
-        static bool playGame()
-        {
-            CL_cards cards = new CL_cards();
-            CL_croupier croupier = new CL_croupier(cards);
             CL_player bank = new CL_player(PlayerType_Enum.Bank, "Bank");
             CL_player player1 = new CL_player(PlayerType_Enum.Person, "Eric");
             CL_player player2 = new CL_player(PlayerType_Enum.Person, "Tybo");
+
+            for (int i = 0; i < nbGames; i++)
+            {
+                Program.playGame(bank, player1, player2);
+            }
+
+            Console.WriteLine("Number of game: " + nbGames);
+            Console.WriteLine("Number of game the bank won: " + bank.Points);
+            Console.WriteLine("Number of game the player 1 won: " + player1.Points);
+            Console.WriteLine("Number of game the player 2 won: " + player2.Points);
+            Console.WriteLine("% Of bank win: " + (bank.Points * 100) / nbGames + "%");
+        }
+
+        //True if the bank won the game
+        static void playGame(CL_player bank, CL_player player1, CL_player player2)
+        {
+            CL_cards cards = new CL_cards();
+            CL_croupier croupier = new CL_croupier(cards);
             croupier.Cards.Shuffle();
             croupier.GiveCards(bank);
             croupier.GiveCards(player1);
@@ -38,12 +41,9 @@ namespace Kazineau
             list.Add(player2);
 
             //Program.gamesCount++;
-            return croupier.BankWon(list);
-            //CL_player winner = list[winnerIndex];
-            //if (winner.Type == PlayerType_Enum.Bank)
-            //{
-            //    Program.bankWin++;
-            //}
+            //return croupier.BankWon(list);
+
+            croupier.WhoWins(list);
         }
     }
 }

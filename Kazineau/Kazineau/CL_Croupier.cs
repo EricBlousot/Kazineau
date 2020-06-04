@@ -14,21 +14,24 @@ namespace Kazineau
 
         public CL_cards Cards;
 
-        public int WhoWins(List<CL_player> players)
+        public void WhoWins(List<CL_player> players)
         {
-            for(int i = 0; i < players.Count; i++)
+            List<CL_player> banks = players.Select(x => x).Where(x => x.Type == PlayerType_Enum.Bank).ToList();
+            if (banks.Count != 1)
             {
-                if (players[i].IsBankAndHasSimilarCards())
-                {
-                    return i;
-                }
+                throw new ArgumentException("The list has to contains exactly one Bank");
             }
+            if(banks[0].IsBankAndHasSimilarCards())
+            {
+                banks[0].Points++;
+            }
+
             List<int> scores = new List<int>();
             for(int i = 0; i < players.Count; i++)
             {
                 scores.Add(GetScore(players[i]));
             }
-            return scores.IndexOf(scores.Max(x=>x));
+            players[scores.IndexOf(scores.Max(x=>x))].Points++;
         }
 
         public bool BankWon(List<CL_player> players)
