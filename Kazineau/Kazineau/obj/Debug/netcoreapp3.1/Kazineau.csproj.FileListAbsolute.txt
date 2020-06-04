@@ -1,0 +1,11 @@
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.exe
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.deps.json
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.runtimeconfig.json
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.runtimeconfig.dev.json
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.dll
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.pdb
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.csprojAssemblyReference.cache
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.AssemblyInfoInputs.cache
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.AssemblyInfo.cs
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.dll
+C:\Users\Belcourtois\Desktop\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.pdb
