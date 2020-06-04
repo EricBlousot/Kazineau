@@ -8,23 +8,13 @@ namespace Kazineau
     {
         static void Main(string[] args)
         {
-            int RoundsNumber = 10000; 
-            Thread t1 = new Thread(() =>
-            {
-                playGame(RoundsNumber);
-            });
-            Thread t2 = new Thread(() =>
-            {
-                playGame(RoundsNumber);
-            });
-            Thread t3 = new Thread(() =>
-            {
-                playGame(RoundsNumber);
-            });
+            int RoundsNumber = 10000;
+            Thread t1 = new Thread(() =>{playGame(RoundsNumber);});
+            Thread t2 = new Thread(() =>{playGame(RoundsNumber);});
+            Thread t3 = new Thread(() =>{playGame(RoundsNumber);});
             t1.Start();
             t2.Start();
             t3.Start();
-            //playGame(RoundsNumber);
         }
 
 
