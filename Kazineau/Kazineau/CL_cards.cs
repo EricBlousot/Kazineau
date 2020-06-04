@@ -28,10 +28,8 @@ namespace Kazineau
             List<Card> Result = new List<Card>();
             for (int i = 0; i < number; i++)
             {
-                Random random = new Random();
-                int index = random.Next(0, Cards.Count);
-                Result.Add(Cards[index]);
-                this.Cards.RemoveAt(index);
+                Result.Add(this.Cards[0]);
+                this.Cards.RemoveAt(0);
             }
             return Result;
         }

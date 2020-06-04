@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj": {}
+    "C:\\Users\\Belcourtois\\Desktop\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj": {}
   },
   "projects": {
-    "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj": {
+    "C:\\Users\\Belcourtois\\Desktop\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
+        "projectUniqueName": "C:\\Users\\Belcourtois\\Desktop\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
         "projectName": "Kazineau",
-        "projectPath": "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
-        "packagesPath": "C:\\Users\\souqu\\.nuget\\packages\\",
-        "outputPath": "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\obj\\",
+        "projectPath": "C:\\Users\\Belcourtois\\Desktop\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
+        "packagesPath": "C:\\Users\\Belcourtois\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Belcourtois\\Desktop\\Kazineau\\Kazineau\\Kazineau\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\souqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Belcourtois\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ptlmt/_packaging/POYCCommon.NuGet%40Prerelease/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ptlmt/_packaging/POYCCommon.NuGet/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ptlmt/_packaging/PTLCore.Nuget/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -47,18 +53,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

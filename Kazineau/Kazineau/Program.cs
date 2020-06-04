@@ -7,26 +7,27 @@ namespace Kazineau
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 2000; i++)
+            int nbBankWin = 0;
+            int nbGames = 10000;
+            for (int i = 0; i < nbGames; i++)
             {
-                Program.playGame();
+                nbBankWin+=Program.playGame()?1:0;
             }
 
-            Console.WriteLine("Number of game: " + Program.gamesCount);
-            Console.WriteLine("Number of game the bank winned: " + Program.bankWin);
-            Console.WriteLine("% Of bank win: " + (Program.bankWin * 100) / Program.gamesCount + "%");
+            Console.WriteLine("Number of game: " + nbGames);
+            Console.WriteLine("Number of game the bank winned: " + nbBankWin);
+            Console.WriteLine("% Of bank win: " + (nbBankWin * 100) / nbGames + "%");
         }
 
-        static int gamesCount = 0;
-        static int bankWin = 0;
-
-        static void playGame()
+        //True if the bank won the game
+        static bool playGame()
         {
             CL_cards cards = new CL_cards();
             CL_croupier croupier = new CL_croupier(cards);
             CL_player bank = new CL_player(PlayerType_Enum.Bank, "Bank");
             CL_player player1 = new CL_player(PlayerType_Enum.Person, "Eric");
             CL_player player2 = new CL_player(PlayerType_Enum.Person, "Tybo");
+            croupier.Cards.Shuffle();
             croupier.GiveCards(bank);
             croupier.GiveCards(player1);
             croupier.GiveCards(player2);
@@ -36,13 +37,13 @@ namespace Kazineau
             list.Add(player1);
             list.Add(player2);
 
-            int winnerIndex = croupier.WhoWins(list);
-            CL_player winner = list[winnerIndex];
-            if (winner.Type == PlayerType_Enum.Bank)
-            {
-                Program.bankWin++;
-            }
-            Program.gamesCount++;
+            //Program.gamesCount++;
+            return croupier.BankWon(list);
+            //CL_player winner = list[winnerIndex];
+            //if (winner.Type == PlayerType_Enum.Bank)
+            //{
+            //    Program.bankWin++;
+            //}
         }
     }
 }
