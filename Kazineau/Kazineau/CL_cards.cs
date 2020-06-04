@@ -6,16 +6,21 @@ namespace Kazineau
 {
     class CL_cards
     {
+        public List<Card> Cards;
         public CL_cards()
         {
-            this.batch = new List<Card>();
-            for(int i = 1; i <= 1; i++)
+            this.Cards = new List<Card>();
+            for (int i = 1; i <= 13; i++)
             {
-                for(int j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)
                 {
-                    this.batch.Add(new Card(i,(CardSuit_Enum)j));
+                    this.Cards.Add(new Card(i, (CardSuit_Enum)j));
                 }
             }
+        }
+        public CL_cards(List<Card> cards)
+        {
+            this.Cards = cards;
         }
 
         public List<Card> Draw(int number)
@@ -23,15 +28,15 @@ namespace Kazineau
             List<Card> Result = new List<Card>();
             for(int i = 0; i < number; i++)
             {
-                Result.Add(batch[0]);
-                this.batch.RemoveAt(0);
+                Result.Add(Cards[0]);
+                this.Cards.RemoveAt(0);
             }
             return Result;
         }
 
         public void Insert(Card card)
         {
-            this.batch.Add(card);
+            this.Cards.Add(card);
         }
 
         public void Shuffle()
@@ -39,23 +44,22 @@ namespace Kazineau
             Random rdm = new Random();
             int position = 0;
             List<Card> NewBatch = new List<Card>();
-            while (this.batch.Count > 0)
+            while (this.Cards.Count > 0)
             {
-                position = rdm.Next() % this.batch.Count;
-                NewBatch.Add(this.batch[position]);
-                this.batch.RemoveAt(position);
+                position = rdm.Next() % this.Cards.Count;
+                NewBatch.Add(this.Cards[position]);
+                this.Cards.RemoveAt(position);
             }
-            this.batch = NewBatch;
+            this.Cards = NewBatch;
         }
 
         public void Display()
         {
-            for(int i = 0; i < this.batch.Count;i++)
+            for(int i = 0; i < this.Cards.Count;i++)
             {
-                this.batch[i].Display();
+                this.Cards[i].Display();
             }
         }
 
-        private List<Card> batch;
     }
 }

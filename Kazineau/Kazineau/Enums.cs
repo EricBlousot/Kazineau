@@ -11,4 +11,10 @@ namespace Kazineau
         Club,
         Spade
     }
+
+    enum PlayerType_Enum
+    {
+        Person,
+        Bank
+    }
 }
