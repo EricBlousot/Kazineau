@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "86lcYLtu8u4JE3JH/rJmmMNxoLHgwf0k4C6QgnY/2jEd1rbqQ1Pc627f562O2/iHNlNwaBQOp0eu6f+xdAZLtg==",
+  "success": true,
+  "projectFilePath": "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\souqu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -26,10 +26,12 @@ namespace Kazineau
         public List<Card> Draw(int number)
         {
             List<Card> Result = new List<Card>();
-            for(int i = 0; i < number; i++)
+            for (int i = 0; i < number; i++)
             {
-                Result.Add(Cards[0]);
-                this.Cards.RemoveAt(0);
+                Random random = new Random();
+                int index = random.Next(0, Cards.Count);
+                Result.Add(Cards[index]);
+                this.Cards.RemoveAt(index);
             }
             return Result;
         }
