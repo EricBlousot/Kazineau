@@ -18,7 +18,7 @@ E:\Projets\Kazineau\Kazineau\Kazineau\bin\Debug\netcoreapp3.1\Kazineau.pdb
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.csprojAssemblyReference.cache
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.AssemblyInfoInputs.cache
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.AssemblyInfo.cs
-E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.csproj.CoreCompileInputs.cache
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.dll
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.pdb
 E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.genruntimeconfig.cache
+E:\Projets\Kazineau\Kazineau\Kazineau\obj\Debug\netcoreapp3.1\Kazineau.csproj.CoreCompileInputs.cache

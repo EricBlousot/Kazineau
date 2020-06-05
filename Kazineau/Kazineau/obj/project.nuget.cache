@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "86lcYLtu8u4JE3JH/rJmmMNxoLHgwf0k4C6QgnY/2jEd1rbqQ1Pc627f562O2/iHNlNwaBQOp0eu6f+xdAZLtg==",
+  "dgSpecHash": "UWJ4LxdUS1ele22gguB/KTrEnAO1pbPgVTese0+rk+XProxNp/h/9BVf7NsOC1ZXOm+qLn6DvS6FqPgwLxnO5A==",
   "success": true,
   "projectFilePath": "E:\\Projets\\Kazineau\\Kazineau\\Kazineau\\Kazineau.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\souqu\\.nuget\\packages\\microsoft.tpl.dataflow\\4.5.24\\microsoft.tpl.dataflow.4.5.24.nupkg.sha512",
     "C:\\Users\\souqu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'Microsoft.Tpl.Dataflow 4.5.24' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "Microsoft.Tpl.Dataflow",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
