@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Kazineau
 {
@@ -8,32 +9,36 @@ namespace Kazineau
     {
         static void Main(string[] args)
         {
-            int RoundsNumber = 10000;
-            Thread t1 = new Thread(() =>{playGame(RoundsNumber);});
-            Thread t2 = new Thread(() =>{playGame(RoundsNumber);});
-            Thread t3 = new Thread(() =>{playGame(RoundsNumber);});
-            t1.Start();
-            t2.Start();
-            t3.Start();
+            playGame(1000000);
         }
 
 
         static void playGame(int RoundsNumber)
         {
-            CL_player bank = new CL_player(PlayerType_Enum.Bank, "Bank");
-            CL_player player1 = new CL_player(PlayerType_Enum.Person, "Eric");
-            CL_player player2 = new CL_player(PlayerType_Enum.Person, "Tybo");
+            Task<int>[] taskArray = new Task<int>[10];
 
-            for (int i = 0; i < RoundsNumber; i++)
+            for (int i = 0; i< taskArray.Length; i++)
             {
-                Program.playRound(bank, player1, player2);
-            }
+                taskArray[i] = Task<int>.Factory.StartNew(() => {
+                    CL_player bank = new CL_player(PlayerType_Enum.Bank, "Bank");
+                    CL_player player1 = new CL_player(PlayerType_Enum.Person, "Eric");
+                    CL_player player2 = new CL_player(PlayerType_Enum.Person, "Tybo");
 
-            Console.WriteLine("Number of game: " + RoundsNumber);
-            Console.WriteLine("Number of game the bank won: " + bank.Points);
-            Console.WriteLine("Number of game the player 1 won: " + player1.Points);
-            Console.WriteLine("Number of game the player 2 won: " + player2.Points);
-            Console.WriteLine("% Of bank win: " + (bank.Points * 100) / RoundsNumber + "%");
+                    for (int j = 0; j < RoundsNumber; j++)
+                    {
+                        Program.playRound(bank, player1, player2);
+                    }
+                    return bank.Points;
+                });
+            }
+            Task.WaitAll(taskArray);
+            int sum = 0;
+            for (int i = 0; i < taskArray.Length; i++)
+            {
+
+                sum += taskArray[i].Result;
+            }
+            Console.WriteLine("Resultat " + (sum / taskArray.Length)/(RoundsNumber/100));
         }
         //True if the bank won the game
         static void playRound(CL_player bank, CL_player player1, CL_player player2)
@@ -49,9 +54,6 @@ namespace Kazineau
             list.Add(bank);
             list.Add(player1);
             list.Add(player2);
-
-            //Program.gamesCount++;
-            //return croupier.BankWon(list);
 
             croupier.WhoWins(list);
         }
